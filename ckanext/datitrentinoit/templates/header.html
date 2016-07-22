@@ -14,17 +14,26 @@
 
 {% endblock %}
 
-
 {# -- Customize navigation links -- #}
 {% block header_site_navigation %}
   <nav class="section navigation">
     <ul class="nav nav-pills">
-      {% block header_site_navigation_tabs %}
+      {#% block header_site_navigation_tabs %}
         {{ h.build_nav_main(
         ("search", _("Datasets")),
         ("organizations_index", _("Organizations")),
         ("group_index", _("Categories")),
         ("related_dashboard", _("Apps")),
+        ("about", _("About")),
+        ("faq", _('FAQ')),
+        ) }}
+      {% endblock %#}
+
+      {% block header_site_navigation_tabs %}
+        {{ h.build_nav_main(
+        ("search", _("Datasets")),
+        ("organizations_index", _("Organizations")),
+        ("group_index", _("Categories")),
         ("about", _("About")),
         ("faq", _('FAQ')),
         ) }}

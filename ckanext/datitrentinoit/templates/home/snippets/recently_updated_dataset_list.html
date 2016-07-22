@@ -1,0 +1,7 @@
+{% set datasets = h.dti_recent_updates(20) %}
+
+<ul class="dataset-list unstyled">
+ {% for dataset in datasets %}
+    {% snippet 'snippets/package_item.html', package=dataset, truncate_title=80 %}
+ {% endfor %}
+</ul>

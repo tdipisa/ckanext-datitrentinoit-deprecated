@@ -20,7 +20,7 @@
 {% block primary_content %}
 
 {% resource 'ckanext-datitrentinoit/scripts/homepage-slider.js' %}
-{% resource 'ckanext-datitrentinoit/scripts/homepage-feed.js' %}
+{#% resource 'ckanext-datitrentinoit/scripts/homepage-feed.js' %#}
 
 <div class="homepage-slider-ng">
   <div class="images-wrapper">
@@ -131,9 +131,10 @@
             {# <p>{{ _("See which are the most recent changes to datasets.") }}</p> #}
           </header>
 
-          <div id="latest-changes">
-            <p style="padding: 15px;text-align:center;">
-              <a href="/revision/list?format=atom" class="no-underline" style="color:#000;font-size:80px;" title="Atom Feed"><i class="icon-rss" style="color:#f90;font-size:80px;"></i> Feed</a>
+          <div id="latest-changes" style="padding: 10px; overflow: auto; height: 190px;">
+            <p style="text-align:center;">
+              <!--a href="/revision/list?format=atom" class="no-underline" style="color:#000;font-size:80px;" title="Atom Feed"><i class="icon-rss" style="color:#f90;font-size:80px;"></i> Feed</a-->
+              {% snippet 'home/snippets/recently_updated_dataset_list.html' %}
             </p>
           </div>
 

@@ -15,6 +15,7 @@ import ckan.lib.base as base
 import ckan.plugins.toolkit as plugins_toolkit
 import routes.mapper as routes_mapper
 
+import ckanext.datitrentinoit.helpers as helpers
 
 static_pages = ['faq', 'acknowledgements', 'legal_notes', 'privacy']
 # static_pages = ['faq', 'acknowledgements']
@@ -305,6 +306,7 @@ class DatiTrentinoPlugin(SingletonPlugin):
         return {
             'dti_ga_site_id': self._get_ga_site_id,
             'dti_ga_site_domain': self._get_ga_site_domain,
+            'dti_recent_updates': helpers.recent_updates,
         }
 
     def _get_ga_site_id(self):
