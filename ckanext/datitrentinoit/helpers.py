@@ -15,6 +15,14 @@ from ckanext.multilang.model import PackageMultilang
 
 log = logging.getLogger(__file__)
 
+def getLanguage():
+    lang = get_lang()
+    
+    if lang is not None:
+        lang = unicode(lang[0])        
+    
+    return lang
+
 def recent_updates(n):
     #
     # Return a list of the n most recently updated datasets.
@@ -36,7 +44,7 @@ def recent_updates(n):
     for item in search_results.get('results'):
         log.info(':::::::::::: Retrieving the corresponding localized title and abstract :::::::::::::::')
 
-        lang = get_lang()[0]
+        lang = getLanguage()
         
         q_results = model.Session.query(PackageMultilang).filter(PackageMultilang.package_id == item.get('id'), PackageMultilang.lang == lang).all() 
 
