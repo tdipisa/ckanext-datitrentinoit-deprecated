@@ -5,13 +5,14 @@ version = '0.1.1'
 
 entry_points = {
     'ckan.plugins': [
-        "datitrentinoit = ckanext.datitrentinoit.plugin:DatiTrentinoPlugin",
-        "datitrentinoit_form = ckanext.datitrentinoit.plugin:"
-        "DatiTrentinoFormPlugin",
+        "datitrentinoit = ckanext.datitrentinoit.plugin:DatiTrentinoPlugin"
     ],
     'babel.extractors': [
         'ckan = ckan.lib.extract:extract_ckan',
     ],
+    'paste.paster_command': [
+        'datitrentinoitdb=ckanext.datitrentinoit.commands.command:DatiTrentinoCommand'
+    ]
 }
 
 install_requires = []

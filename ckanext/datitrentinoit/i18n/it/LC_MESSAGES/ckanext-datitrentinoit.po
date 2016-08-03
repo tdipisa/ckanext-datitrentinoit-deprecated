@@ -305,6 +305,102 @@ msgstr "Campo"
 msgid "Value"
 msgstr "Valore"
 
+#: ckanext/datitrentinoit/templates/package/snippets/package_basic_fields.html:8
+msgid "Holder"
+msgstr "Titolare"
+
+#: ckanext/datitrentinoit/templates/package/snippets/package_basic_fields.html:12
+msgid "Geographical Coverage"
+msgstr "Copertura geografica"
+
+#: ckanext/datitrentinoit/templates/package/snippets/package_basic_fields.html:16
+msgid "Temporal Coverage (Start Date)"
+msgstr "Copertura temporale (Data di inizio)"
+
+#: ckanext/datitrentinoit/templates/package/snippets/package_basic_fields.html:20
+msgid "Temporal Coverage (End Date)"
+msgstr "Copertura temporale (Data fine)"
+
+#: ckanext/datitrentinoit/templates/package/snippets/package_basic_fields.html:23
+msgid "Update Frequency"
+msgstr "Frequenza aggiornamento"
+
+#: ckanext/datitrentinoit/templates/package/snippets/package_basic_fields.html:23
+msgid "asNeeded"
+msgstr "se necessario"
+
+#: ckanext/datitrentinoit/templates/package/snippets/package_basic_fields.html:23
+msgid "quarterly"
+msgstr "quartale"
+
+#: ckanext/datitrentinoit/templates/package/snippets/package_basic_fields.html:23
+msgid "fortnightly"
+msgstr "stagionale"
+
+#: ckanext/datitrentinoit/templates/package/snippets/package_basic_fields.html:23
+msgid "annually"
+msgstr "annuale"
+
+#: ckanext/datitrentinoit/templates/package/snippets/package_basic_fields.html:23
+msgid "monthly"
+msgstr "mensile"
+
+#: ckanext/datitrentinoit/templates/package/snippets/package_basic_fields.html:23
+msgid "weekly"
+msgstr "settimanale"
+
+#: ckanext/datitrentinoit/templates/package/snippets/package_basic_fields.html:23
+msgid "daily"
+msgstr "giornaliero"
+
+#: ckanext/datitrentinoit/templates/package/snippets/package_basic_fields.html:23
+msgid "continual"
+msgstr "continuo"
+
+#: ckanext/datitrentinoit/templates/package/snippets/package_basic_fields.html:23
+msgid "notPlanned"
+msgstr "non programmato"
+
+#: ckanext/datitrentinoit/templates/package/snippets/package_basic_fields.html:23
+msgid "irregular"
+msgstr "irregolare"
+
+#: ckanext/datitrentinoit/templates/package/snippets/package_basic_fields.html:23
+msgid "unknown"
+msgstr "sconosciuto"
+
+#: ckanext/datitrentinoit/templates/package/snippets/package_basic_fields.html:26
+msgid "Creation Date"
+msgstr "Data di creazione"
+
+#: ckanext/datitrentinoit/templates/package/snippets/package_basic_fields.html:29
+msgid "Publication Date"
+msgstr "Data di pubblicazione"
+
+#: ckanext/datitrentinoit/templates/package/snippets/package_basic_fields.html:32
+msgid "Revision Date"
+msgstr "Data di aggiornamento"
+
+#: ckanext/datitrentinoit/templates/package/snippets/package_basic_fields.html:35
+msgid "Encoding"
+msgstr "Codifica caratteri (Set dei caratteri)"
+
+#: ckanext/datitrentinoit/templates/package/snippets/package_basic_fields.html:38
+msgid "Site URL"
+msgstr "URL sito"
+
+#: ckanext/datitrentinoit/templates/package/snippets/package_basic_fields.html:41
+msgid "contact"
+msgstr "Contatto"
+
+#: ckanext/datitrentinoit/templates/package/snippets/package_basic_fields.html:75
+msgid "Field Description"
+msgstr "Descrizione Campi"
+
+#: ckanext/datitrentinoit/templates/package/snippets/additional_info.html:9
+msgid "Dataset Metadata"
+msgstr "Metadati del Dataset"
+
 #: ckanext/datitrentinoit/templates/package/search.html:4
 msgid "Add Dataset"
 msgstr "Aggiungi un dataset"
