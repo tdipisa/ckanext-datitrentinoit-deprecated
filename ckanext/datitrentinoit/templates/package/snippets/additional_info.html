@@ -29,9 +29,9 @@
           <tr>
             <th scope="row" class="dataset-label">{{ _("Geographical Coverage") }}</th>
             {% if locale == 'de' %}
-              <td class="dataset-details">{{ geographical_coverage or "Zuständigkeitsgebiet der Organisationseinheit" }}</td>
+              <td class="dataset-details">{{ geographical_coverage or pkg_dict.geographical_coverage or "Zuständigkeitsgebiet der Organisationseinheit" }}</td>
             {% else %}
-              <td class="dataset-details">{{ geographical_coverage or "Area di competenza dell'unità organizzativa preposta" }}</td>
+              <td class="dataset-details">{{ geographical_coverage or pkg_dict.geographical_coverage or "Area di competenza dell'unità organizzativa preposta" }}</td>
             {% endif %}
           </tr>
         {% else %}
@@ -50,9 +50,9 @@
           <tr>
             <th scope="row" class="dataset-label">{{ _("Temporal Coverage (Start Date)") }}</th>
             {% if locale == 'de' %}
-              <td class="dataset-details">{{ temporal_coverage_start or "N/V" }}</td>
+              <td class="dataset-details">{{ temporal_coverage_start or pkg_dict.temporal_coverage_start or "N/V" }}</td>
             {% else %}
-              <td class="dataset-details">{{ temporal_coverage_start or "N/A" }}</td>
+              <td class="dataset-details">{{ temporal_coverage_start or pkg_dict.temporal_coverage_start or "N/A" }}</td>
             {% endif %}
           </tr>
         {% else %}
@@ -71,9 +71,9 @@
           <tr>
             <th scope="row" class="dataset-label">{{ _("Temporal Coverage (End Date)") }}</th> 
             {% if locale == 'de' %}
-              <td class="dataset-details">{{ temporal_coverage_end or "N/V" }}</td>
+              <td class="dataset-details">{{ temporal_coverage_end or pkg_dict.temporal_coverage_end or "N/V" }}</td>
             {% else %}
-              <td class="dataset-details">{{ temporal_coverage_end or "N/A" }}</td>
+              <td class="dataset-details">{{ temporal_coverage_end or pkg_dict.temporal_coverage_end or "N/A" }}</td>
             {% endif %}
           </tr>
         {% else %}

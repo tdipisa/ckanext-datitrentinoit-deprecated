@@ -39,17 +39,17 @@
   <!-- Geographical Coverage -->
   {% set geographical_coverage = h.dti_get_localized_field_value('geographical_coverage', data) %}
   {% set geographical_coverage_default = "Zuständigkeitsgebiet der Organisationseinheit" if locale =='de' else "Area di competenza dell'unità organizzativa preposta" %}
-  {{ form.input('geographical_coverage', label=_('Geographical Coverage'), id='field-geographical_coverage', placeholder=_('Geographical Coverage'), value=geographical_coverage or geographical_coverage_default, error=errors.geographical_coverage, classes=['control-medium']) }}
+  {{ form.input('geographical_coverage', label=_('Geographical Coverage'), id='field-geographical_coverage', placeholder=_('Geographical Coverage'), value=geographical_coverage or data.geographical_coverage or geographical_coverage_default, error=errors.geographical_coverage, classes=['control-medium']) }}
 
   <!-- Temporal Coverage (Start Date) -->
   {% set temporal_coverage_start = h.dti_get_localized_field_value('temporal_coverage_start', data) %}
   {% set temporal_coverage_start_default = 'N/V' if locale =='de' else 'N/A' %}
-  {{ form.input('temporal_coverage_start', label=_('Temporal Coverage (Start Date)'), id='field-temporal_coverage_start', placeholder=_('Temporal Coverage (Start Date)'), value=temporal_coverage_start or temporal_coverage_start_default, error=errors.temporal_coverage_start, classes=['control-medium']) }}
+  {{ form.input('temporal_coverage_start', label=_('Temporal Coverage (Start Date)'), id='field-temporal_coverage_start', placeholder=_('Temporal Coverage (Start Date)'), value=temporal_coverage_start or data.temporal_coverage_start or temporal_coverage_start_default, error=errors.temporal_coverage_start, classes=['control-medium']) }}
 
   <!-- Copertura Temporale (Data di fine) -->
   {% set temporal_coverage_end = h.dti_get_localized_field_value('temporal_coverage_end', data) %}
   {% set temporal_coverage_end_default = 'N/V' if locale =='de' else 'N/A' %}
-  {{ form.input('temporal_coverage_end', label=_('Temporal Coverage (End Date)'), id='field-temporal_coverage_end', placeholder=_('Temporal Coverage (End Date)'), value=temporal_coverage_end or temporal_coverage_end_default, error=errors.temporal_coverage_end, classes=['control-medium']) }}
+  {{ form.input('temporal_coverage_end', label=_('Temporal Coverage (End Date)'), id='field-temporal_coverage_end', placeholder=_('Temporal Coverage (End Date)'), value=temporal_coverage_end or data.temporal_coverage_end or temporal_coverage_end_default, error=errors.temporal_coverage_end, classes=['control-medium']) }}
   
   <!-- Update Frequency -->
   {% set update_frequency = h.dti_get_localized_field_value('update_frequency', data) %}
