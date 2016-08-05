@@ -27,7 +27,7 @@ class DatiTrentinoPlugin(plugins.SingletonPlugin, plugins_toolkit.DefaultDataset
 
     custom_fields = [
         {'key': 'holder', 'localized': True},
-        {'key': 'geographical_coverage', 'localized': False},
+        {'key': 'geographical_coverage', 'localized': True},
         {'key': 'temporal_coverage_start', 'localized': False},
         {'key': 'temporal_coverage_end', 'localized': False},
         {'key': 'update_frequency', 'localized': True},
