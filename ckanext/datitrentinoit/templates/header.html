@@ -14,5 +14,16 @@
 
 {% endblock %}
 
+{% block header_site_navigation_tabs %}
+	{{ h.build_nav_main(
+	("search", _("Datasets")),
+	("organizations_index", _("Organizations")),
+	("group_index", _("Groups")),
+	("about", _("About")),
+	('ckanext_showcase_index', _('Showcases')),
+	("faq", _('FAQ')),
+	) }}
+{% endblock %}
+
 {# -- Remove duplicate search box -- #}
 {% block header_site_search %}{% endblock %}
