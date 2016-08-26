@@ -12,12 +12,14 @@
   <article class="module">
     <div class="module-content">
       {% block about %}
-	<h1 class="page-heading">{{ _('About') }}</h1>
-	{% if lang == 'it' %}
-	  {% snippet 'home/about_text_it.html' %}
-	{% else %}
-	  {% snippet 'home/about_text.html' %}
-	{% endif %}
+      	<h1 class="page-heading">{{ _('About') }}</h1>
+      	{% if lang == 'it' %}
+      	  {% snippet 'home/about_text_it.html' %}
+      	{% elif lang == 'de' %}
+          {% snippet 'home/about_text_de.html' %}
+        {% else %}
+      	  {% snippet 'home/about_text_en.html' %}
+      	{% endif %}
       {% endblock %}
     </div>
   </article>

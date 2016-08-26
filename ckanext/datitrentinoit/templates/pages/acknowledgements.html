@@ -5,20 +5,20 @@
 
 {% block breadcrumb_content %}
   <li class="active">
-    {% link_for _('Acknowledgements'),
-       controller='ckanext.datitrentinoit.plugin:DatiTrentinoController',
-       action='acknowledgements' %}
+    {% link_for _('Acknowledgements'), controller='ckanext.datitrentinoit.plugin:DatiTrentinoController', action='acknowledgements' %}
   </li>
 {% endblock %}
 
 {% block primary %}
   <article class="module">
     <div class="module-content">
-	{% if lang == 'it' %}
-	  {% snippet 'pages/acknowledgements_text_it.html' %}
-	{% else %}
-	  {% snippet 'pages/acknowledgements_text.html' %}
-	{% endif %}
+  	{% if lang == 'it' %}
+  	  {% snippet 'pages/acknowledgements_text_it.html' %}
+  	{% elif lang == 'de' %}
+      {% snippet 'pages/acknowledgements_text_de.html' %}
+    {% else %}
+  	  {% snippet 'pages/acknowledgements_text_en.html' %}
+  	{% endif %}
     </div>
   </article>
 {% endblock %}

@@ -717,3 +717,4 @@ input[type="color"]:focus,
   -moz-transform: rotate(-6deg);
   -webkit-transform: rotate(-6deg);
 }
+.footer-links ul > li > a > i {width:15px; display:inline-flex;}

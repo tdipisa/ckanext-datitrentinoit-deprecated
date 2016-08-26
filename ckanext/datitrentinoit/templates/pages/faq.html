@@ -6,9 +6,7 @@
 
 {% block breadcrumb_content %}
   <li class="active">
-    {% link_for _('FAQ'),
-        controller='ckanext.datitrentinoit.plugin:DatiTrentinoController',
-        action='faq' %}
+    {% link_for _('FAQ'), controller='ckanext.datitrentinoit.plugin:DatiTrentinoController', action='faq' %}
   </li>
 {% endblock %}
 
@@ -17,11 +15,13 @@
     <div class="module-content">
       {% block about %}
           <h1 class="page-heading">{{ _('FAQ') }}</h1>
-	{% if lang == 'it' %}
-	  {% snippet 'pages/faq_text_it.html' %}
-	{% else %}
-	  {% snippet 'pages/faq_text.html' %}
-	{% endif %}
+        	{% if lang == 'it' %}
+        	  {% snippet 'pages/faq_text_it.html' %}
+          {% elif lang == 'de' %}
+            {% snippet 'pages/faq_text_de.html' %}
+          {% else %}
+        	  {% snippet 'pages/faq_text_en.html' %}
+        	{% endif %}
       {% endblock %}
     </div>
   </article>

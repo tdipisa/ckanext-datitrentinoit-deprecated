@@ -16,13 +16,14 @@
   <article class="module">
     <div class="module-content">
       {% block about %}
-	{% if lang == 'it' %}
-	  <h1 class="page-heading">Informativa sulla privacy</h1>
-	  {% snippet 'pages/privacy_text_it.html' %}
-	{% else %}
-	  <h1 class="page-heading">Privacy</h1>
-	  {% snippet 'pages/privacy_text.html' %}
-	{% endif %}
+        <h1 class="page-heading">{{ _('Privacy') }}</h1>
+      	{% if lang == 'it' %}      	  
+      	  {% snippet 'pages/privacy_text_it.html' %}
+      	{% elif lang == 'de' %}         
+          {% snippet 'pages/privacy_text_de.html' %}
+        {% else %}
+      	  {% snippet 'pages/privacy_text_en.html' %}
+      	{% endif %}
       {% endblock %}
     </div>
   </article>
