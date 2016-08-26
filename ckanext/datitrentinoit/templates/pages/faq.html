@@ -19,6 +19,8 @@
           <h1 class="page-heading">{{ _('FAQ') }}</h1>
 	{% if lang == 'it' %}
 	  {% snippet 'pages/faq_text_it.html' %}
+	{% if lang == 'de' %}
+	  {% snippet 'pages/faq_text_de.html' %}
 	{% else %}
 	  {% snippet 'pages/faq_text.html' %}
 	{% endif %}
