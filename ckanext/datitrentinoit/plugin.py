@@ -157,7 +157,7 @@ class DatiTrentinoPlugin(plugins.SingletonPlugin, plugins_toolkit.DefaultDataset
         if lang:    
             for extra in pkg_dict.get('extras'):
                 for field in self.custom_fields:
-                    if extra.get('key') == field['key'] and field.localized == True:
+                    if extra.get('key') == field['key'] and field['localized'] == True:
                         log.info(':::::::::::::::Localizing custom field: %r', field['key'])
                         
                         # Create the localized field record
