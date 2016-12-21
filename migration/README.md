@@ -58,8 +58,18 @@ This ckanext-datitrentinoit has been updated to integrate the old version of thi
 		git pull 
 
 		pip install -e .
+		
+7. Uninstall the old ckanext-harvest-tn extenstion (now available in the new ckanext-datitrentinoit):
+
+		. /usr/local/app_loc/geosolutions/bin/activate
+		
+		cd /usr/local/data_loc/src/ckanext-harvest-tn
+		
+		pip uninstall .
+		
+		rm -rf /usr/local/data_loc/src/ckanext-harvest-tn
 	
-7. Update the ckanext-datitrentinoit extension:
+8. Update the ckanext-datitrentinoit extension:
 
 		. /usr/local/app_loc/geosolutions/bin/activate
 
@@ -75,9 +85,9 @@ This ckanext-datitrentinoit has been updated to integrate the old version of thi
 	
 			ckan.i18n_directory
 	
-8. Restart CKAN
+9. Restart CKAN
 
-9. Rebuild the Solr indexes:
+10. Rebuild the Solr indexes:
 
 		. /usr/local/app_loc/geosolutions/bin/activate
 
