@@ -5,23 +5,7 @@ This ckanext-datitrentinoit has been updated to integrate the old version of thi
 
 	Follow the steps below only the first time you prepare the system for installing the ckanext-dcatapit.
 
-1. Backup the DB ckan:
-	
-		su postgres
-
-		pg_dump -U postgres -i ckan > ckan.dump
-	
-2. Run the SQL migration script to update DB tables:
-
-		su postgres
-
-		psql -U postgres -d ckan -f /usr/local/data_loc/src/ckanext-datitrentinoit/migration/sql/migration.sql
-	
-3. Upgrade the python setuptools version installed (only if ckan version < 2.5):
-
-		pip install --upgrade setuptools
-
-4. Install the ckanext-dcat extension:
+1. Install the ckanext-dcat extension:
 
 		. /usr/local/app_loc/geosolutions/bin/activate
 
@@ -35,7 +19,7 @@ This ckanext-datitrentinoit has been updated to integrate the old version of thi
 
 		pip install -r requirements.txt
 
-5. Install the ckanext-dcatapit following the steps reported [here](https://github.com/geosolutions-it/ckanext-dcatapit#installation):
+2. Install the ckanext-dcatapit following the steps reported [here](https://github.com/geosolutions-it/ckanext-dcatapit#installation):
 
 	**Ingore the point number 1**
 	
@@ -47,7 +31,7 @@ This ckanext-datitrentinoit has been updated to integrate the old version of thi
 			
 			/usr/lib/ckan/default/src            -> /usr/local/data_loc/src
 		
-6. Update the ckanext-multilang extension:
+3. Update the ckanext-multilang extension:
 
 		. /usr/local/app_loc/geosolutions/bin/activate
 
@@ -55,11 +39,11 @@ This ckanext-datitrentinoit has been updated to integrate the old version of thi
 		
 		git checkout master
 
-		git pull 
+		git pull
 
 		pip install -e .
 		
-7. Uninstall the old ckanext-harvest-tn extenstion (now available in the new ckanext-datitrentinoit):
+4. Uninstall the old ckanext-harvest-tn extenstion (now available in the new ckanext-datitrentinoit):
 
 		. /usr/local/app_loc/geosolutions/bin/activate
 		
@@ -69,7 +53,7 @@ This ckanext-datitrentinoit has been updated to integrate the old version of thi
 		
 		rm -rf /usr/local/data_loc/src/ckanext-harvest-tn
 	
-8. Update the ckanext-datitrentinoit extension:
+5. Update the ckanext-datitrentinoit extension:
 
 		. /usr/local/app_loc/geosolutions/bin/activate
 
@@ -81,13 +65,25 @@ This ckanext-datitrentinoit has been updated to integrate the old version of thi
 
 		pip install -e .
 	
+	- Backup the DB ckan:
+	
+			su postgres
+
+			pg_dump -U postgres -i ckan > ckan.dump
+	
+	- Run the SQL migration script to update DB tables (make sure to have rights to excecute the sql file as user postgres):
+
+			su postgres
+
+			psql -U postgres -d ckan -f /usr/local/data_loc/src/ckanext-datitrentinoit/migration/sql/migration.sql
+		
 	- Update the `/usr/local/app_loc/geosolutions/conf/production.ini` file removing the property below:
 	
 			ckan.i18n_directory
 	
-9. Restart CKAN
+6. Restart CKAN
 
-10. Rebuild the Solr indexes:
+7. Rebuild the Solr indexes:
 
 		. /usr/local/app_loc/geosolutions/bin/activate
 
