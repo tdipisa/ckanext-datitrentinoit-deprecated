@@ -71,7 +71,7 @@ This ckanext-datitrentinoit has been updated to integrate the old version of thi
 
 			pg_dump -U postgres -i ckan > ckan.dump
 	
-	- Run the SQL migration script to update DB tables (make sure to have rights to excecute the sql file as user postgres):
+	- Run the SQL migration script to update DB tables (make sure to have rights to execute the sql file as user postgres):
 
 			su postgres
 
