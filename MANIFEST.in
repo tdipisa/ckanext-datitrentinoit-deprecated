@@ -1,5 +1,3 @@
-include README.rst
-recursive-include ckanext *.jpg *.png
-recursive-include ckanext *.css *.less *.js
-recursive-include ckanext *.html
-recursive-exclude . *~
+include README.md
+recursive-include ckanext/datitrentinoit *.html *.json *.js *.less *.css *.jpg *.png
+recursive-include ckanext/datitrentinoit/i18n *
