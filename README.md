@@ -98,7 +98,7 @@ Below an example of configuration that shows all the available properties:
         {
 			"private_datasets": "False", 
 			"version": "2.6",
-		       "default_values": {
+	        "default_values": {
 			    'dataset_theme': 'OP_DATPRO',
 			    'dataset_place': 'ITA_TRT',
 			    'dataset_language': '{ITA,DEU,ENG}',
@@ -114,7 +114,7 @@ Below an example of configuration that shows all the available properties:
 			    },
 			    'dcatapit_skos_theme_id': 'theme.data-theme-skos',
 			    'dcatapit_skos_places_id': 'theme.places-skos'
-		       },
+	        },
 			"harvest_iso_categories": "True",
 			"organisation_mapping": [
 				{
