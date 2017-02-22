@@ -52,9 +52,9 @@ To install `ckanext-datitrentinoit` for development, activate your CKAN virtuale
 
     pip install -r dev-requirements.txt
 
-## Harvest Configuration
+## CSW Harvest Configuration
 
-Using the ckanext-provbz harvester you can use an additional configuration property in addition to the other allowed for the ckanext-geonetwork and ckanext-multilang harvesters:
+Using the ckanext-datitrentinoit harvester you can use an additional configuration property in addition to the other allowed for the ckanext-geonetwork and ckanext-multilang harvesters:
 
 * ``default_license``: with this property you can specify the default license to use for the CKAN's dataset if none useLimitation has been found into the metadata. Below an example:
 
@@ -98,23 +98,23 @@ Below an example of configuration that shows all the available properties:
         {
 			"private_datasets": "False", 
 			"version": "2.6",
-               "default_values": {
-                    'dataset_theme': 'OP_DATPRO',
-                    'dataset_place': 'ITA_TRT',
-                    'dataset_language': '{ITA,DEU,ENG}',
-                    'agent_code': 'p_TN',
-                    'frequency': 'UNKNOWN',
-                    'agent_code_regex': {
-                        'regex': '\(([^)]+)\:([^)]+)\)',
-                        'groups': [2] # optional, dependes by the regular expression
-                    },
-                    'org_name_regex': {
-                        'regex': '([^(]*)(\(IPa[^)]*\))(.+)',
-                        'groups': [1,3] # optional, dependes by the regular expression
-                    },
-                    'dcatapit_skos_theme_id': 'theme.data-theme-skos',
-                    'dcatapit_skos_places_id': 'theme.places-skos'
-               },
+		       "default_values": {
+			    'dataset_theme': 'OP_DATPRO',
+			    'dataset_place': 'ITA_TRT',
+			    'dataset_language': '{ITA,DEU,ENG}',
+			    'agent_code': 'p_TN',
+			    'frequency': 'UNKNOWN',
+			    'agent_code_regex': {
+				'regex': '\(([^)]+)\:([^)]+)\)',
+				'groups': [2] # optional, dependes by the regular expression
+			    },
+			    'org_name_regex': {
+				'regex': '([^(]*)(\(IPa[^)]*\))(.+)',
+				'groups': [1,3] # optional, dependes by the regular expression
+			    },
+			    'dcatapit_skos_theme_id': 'theme.data-theme-skos',
+			    'dcatapit_skos_places_id': 'theme.places-skos'
+		       },
 			"harvest_iso_categories": "True",
 			"organisation_mapping": [
 				{
