@@ -105,12 +105,12 @@ Below an example of configuration that shows all the available properties:
 			    'agent_code': 'p_TN',
 			    'frequency': 'UNKNOWN',
 			    'agent_code_regex': {
-				'regex': '\(([^)]+)\:([^)]+)\)',
-				'groups': [2] # optional, dependes by the regular expression
+					'regex': '\(([^)]+)\:([^)]+)\)',
+					'groups': [2] # optional, dependes by the regular expression
 			    },
 			    'org_name_regex': {
-				'regex': '([^(]*)(\(IPa[^)]*\))(.+)',
-				'groups': [1,3] # optional, dependes by the regular expression
+					'regex': '([^(]*)(\(IPa[^)]*\))(.+)',
+					'groups': [1,3] # optional, dependes by the regular expression
 			    },
 			    'dcatapit_skos_theme_id': 'theme.data-theme-skos',
 			    'dcatapit_skos_places_id': 'theme.places-skos'
